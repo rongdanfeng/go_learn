@@ -16,4 +16,13 @@ func TestIota(t *testing.T) {
 	/*如果中断了iota那么必须显式的恢复，后续会自动递增自增类型默认是int类型
 	iota能简化const类型的定义*/
 
+	//匿名变量
+	var _ int
+	var _, ok = a()
+	if ok {
+		t.Log("匿名变量用途")
+	}
+}
+func a() (int, bool) {
+	return 0, true
 }
